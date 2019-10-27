@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: traning-service
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:13307/mod_training
+    username: root
+    password: just4mysql
+
+server:
+  port: 8083
+
+eureka:
+  instance:
+    hostname: localhost
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/

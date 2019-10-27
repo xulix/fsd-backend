@@ -1,0 +1,43 @@
+version: '3'
+services:
+  mysql-user:
+    image: mysql/mysql-server:latest
+    ports:
+      - "13306:3306"
+    environment:
+      MYSQL_DATABASE: "mod_user"
+      MYSQL_ROOT_PASSWORD: "just4mysql"
+      MYSQL_ROOT_HOST: "%"
+      TZ: Asia/Shanghai
+    volumes:
+      - /Users/lauro/Documents/Workspace/fsd/mod/docker/volumes/mysql/user:/var/lib/mysql
+    restart: always
+    container_name: docker_mysql_user
+
+  mysql-training:
+    image: mysql/mysql-server:latest
+    ports:
+      - "13307:3306"
+    environment:
+      MYSQL_DATABASE: "mod_training"
+      MYSQL_ROOT_PASSWORD: "just4mysql"
+      MYSQL_ROOT_HOST: "%"
+      TZ: Asia/Shanghai
+    volumes:
+      - /Users/lauro/Documents/Workspace/fsd/mod/docker/volumes/mysql/training:/var/lib/mysql
+    restart: always
+    container_name: docker_mysql_training
+
+  mysql-technology:
+    image: mysql/mysql-server:latest
+    ports:
+      - "13308:3306"
+    environment:
+      MYSQL_DATABASE: "mod_technology"
+      MYSQL_ROOT_PASSWORD: "just4mysql"
+      MYSQL_ROOT_HOST: "%"
+      TZ: Asia/Shanghai
+    volumes:
+      - /Users/lauro/Documents/Workspace/fsd/mod/docker/volumes/mysql/technology:/var/lib/mysql
+    restart: always
+    container_name: docker_mysql_technology

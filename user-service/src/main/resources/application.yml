@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: user-service
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:13306/mod_user
+    username: root
+    password: just4mysql
+
+server:
+  port: 8082
+
+eureka:
+  instance:
+    hostname: localhost
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/
