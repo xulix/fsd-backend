@@ -1,13 +1,10 @@
-package com.fsd.mod.training.dto;
+package com.fsd.mod.training.vo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 @Data
-public class TrainingDto {
-    private Long id;
-    private String status;
-    private Integer progress;
+public class TrainingVo {
     private Float commissionAmount;
     private Integer rating;
     private Float avgRating = 0.0f;
@@ -21,9 +18,6 @@ public class TrainingDto {
     private String endTime;
     private Float amountReceived;
     private Long userId;
-    private String userName;
     private Long mentorId;
-    private String mentorName;
     private Long skillId;
-    private String skillName;
 }
