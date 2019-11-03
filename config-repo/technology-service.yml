@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: technology-service
   jpa:
     database: mysql
     show-sql: true
