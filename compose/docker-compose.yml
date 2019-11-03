@@ -41,3 +41,18 @@ services:
       - /Users/lauro/Documents/Workspace/fsd/mod/docker/volumes/mysql/technology:/var/lib/mysql
     restart: always
     container_name: docker_mysql_technology
+
+  rabbitmq:
+    hostname: rabbitmq
+    image: rabbitmq:management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+#    environment:
+#      RABBITMQ_DEFAULT_USER: "admin"
+#      RABBITMQ_DEFAULT_PASS: "admin"
+#      RABBITMQ_DEFAULT_VHOST: "vhost"
+    volumes:
+      - /Users/lauro/Documents/Workspace/fsd/mod/docker/volumes/rabbitmq/rabbitmq:/var/lib/rabbitmq
+    restart: always
+    container_name: docker_rabbitmq

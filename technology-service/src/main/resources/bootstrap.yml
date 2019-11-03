@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-service
+  application:
+    name: technology-service
+
+eureka:
+  instance:
+    hostname: localhost
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/
