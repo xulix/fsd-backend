@@ -1,11 +1,13 @@
 spring:
+  application:
+    name: technology-service
   cloud:
     config:
       discovery:
         enabled: true
         service-id: config-service
-  application:
-    name: technology-service
+      label: master
+      profile: @profiles.active@
 
 eureka:
   instance:

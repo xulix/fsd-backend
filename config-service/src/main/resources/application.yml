@@ -15,17 +15,27 @@ spring:
         enabled: true
     config:
       server:
-#        git:
-#          uri: https://
-        native:
-          search-locations: file:/Users/lauro/Documents/Workspace/fsd/mod/backend/config-repo
-        bootstrap: true
+        git:
+          uri: https://github.com/xulix/fsd-backend.git
+          search-paths: config-repo
+#        native:
+#          search-locations: file:/Users/lauro/Documents/Workspace/fsd/mod/backend/config-repo
+#        bootstrap: true
   profiles:
     active: native
 
   rabbitmq:
     host: localhost
-    port: 15672
+    port: 5672
     username: guest
     password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
 
