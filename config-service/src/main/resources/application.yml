@@ -21,9 +21,8 @@ spring:
 #        native:
 #          search-locations: file:/Users/lauro/Documents/Workspace/fsd/mod/backend/config-repo
 #        bootstrap: true
-  profiles:
-    active: native
-
+#  profiles:
+#    active: native
   rabbitmq:
     host: localhost
     port: 5672
